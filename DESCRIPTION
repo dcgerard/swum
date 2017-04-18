@@ -1,0 +1,13 @@
+Package: swum
+Type: Package
+Title: SVD With Uncertainty Measures
+Version: 0.1.0
+Authors@R: person("David", "Gerard", email = "dcgerard@uchicago.edu",
+                  role = c("aut", "cre"))
+Description: Contains implementations of various ideas on accounting
+    for uncertainty in the singular value decomposition (SVD).
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+URL: http://github.com/dcgerard/swum
+BugReports: http://github.com/dcgerard/swum/issues
