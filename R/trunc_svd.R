@@ -1,7 +1,6 @@
 
 #' Truncated SVD with uncertainty measures.
 #'
-#'
 #' @param Y A matrix of data. There can be no missing values (yet).
 #' @param prop_row The proportion of rows in Y11.
 #' @param prop_col The proportion of columns in Y11.
@@ -11,6 +10,12 @@
 #' @author David Gerard
 #'
 #' @export
+#'
+#' @return A list with the following elements:
+#' \itemize{
+#'   \item{"rank_dist"}{The distribution of ranks.}
+#'   \item{"d"}{The empirical singular values.}
+#' }
 #'
 trunc_svd <- function(Y, prop_row = 0.5, prop_col = 0.5,
                       max_rank = NULL, itermax = 500) {
@@ -73,6 +78,6 @@ trunc_svd <- function(Y, prop_row = 0.5, prop_col = 0.5,
   rank_dist <- rank_dist / sum(rank_dist)
   names(rank_dist) <- 0:max_rank
   outlist <- list(rank_dist = rank_dist, d = final_d)
-  class(outlist) <- "truncsvd"
+  class(outlist) <- "swumobj"
   return(outlist)
 }

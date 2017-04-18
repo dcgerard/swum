@@ -18,6 +18,13 @@ trunc_svd(Y, prop_row = 0.5, prop_col = 0.5, max_rank = NULL,
 
 \item{itermax}{The maximum number of repetitions to run.}
 }
+\value{
+A list with the following elements:
+\itemize{
+  \item{"rank_dist"}{The distribution of ranks.}
+  \item{"d"}{The empirical singular values.}
+}
+}
 \description{
 Truncated SVD with uncertainty measures.
 }
