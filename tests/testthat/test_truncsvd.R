@@ -23,7 +23,7 @@ test_that("trunc_svd works", {
 )
 
 test_that("soft_svd works", {
-  set.seed(125)
+  set.seed(126)
   n <- 19
   p <- 23
   r <- 5
