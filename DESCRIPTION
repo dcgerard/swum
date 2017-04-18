@@ -11,3 +11,9 @@ Encoding: UTF-8
 LazyData: true
 URL: http://github.com/dcgerard/swum
 BugReports: http://github.com/dcgerard/swum/issues
+Imports: assertthat,
+    ggplot2,
+    irlba
+Suggests: testthat,
+    covr
+RoxygenNote: 6.0.1
